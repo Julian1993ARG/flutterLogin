@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:minimalist_login/components/my_text_field.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -43,7 +44,22 @@ class LoginScreen extends StatelessWidget {
               controller: passwordController,
               hintText: 'Password',
               obscureText: true,
-            ), 
+            ),
+            const SizedBox(height: 10),
+            // Forgot password
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text("Forgot password?",
+                    style: TextStyle(
+                      color: Colors.grey[600]
+                    ),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
