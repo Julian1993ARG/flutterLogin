@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:minimalist_login/components/my_button.dart';
 import 'package:minimalist_login/components/my_text_field.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -7,6 +7,11 @@ class LoginScreen extends StatelessWidget {
 
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
+
+  signUserIn(){
+    print(usernameController.text);
+    print(passwordController.text);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +64,13 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
+            const SizedBox(height: 25),
+            MyButton(
+              onTap: signUserIn,
+            ),
+            const SizedBox(height: 50),
+            
           ],
         ),
       ),
