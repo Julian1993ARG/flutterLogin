@@ -8,7 +8,7 @@ class LoginScreen extends StatelessWidget {
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
 
-  signUserIn(){
+  signUserIn() {
     print(usernameController.text);
     print(passwordController.text);
   }
@@ -57,10 +57,9 @@ class LoginScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text("Forgot password?",
-                    style: TextStyle(
-                      color: Colors.grey[600]
-                    ),
+                  Text(
+                    "Forgot password?",
+                    style: TextStyle(color: Colors.grey[600]),
                   ),
                 ],
               ),
@@ -70,7 +69,31 @@ class LoginScreen extends StatelessWidget {
               onTap: signUserIn,
             ),
             const SizedBox(height: 50),
-            
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Divider(
+                    thickness: 0.5,
+                    color: Colors.grey[700],
+                  )),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Text(
+                      "Or continue with",
+                      style: TextStyle(color: Colors.grey[700]),
+                    ),
+                  ),
+                  Expanded(
+                    child: Divider(
+                    thickness: 0.5,
+                    color: Colors.grey[700],
+                  )),
+                ],
+              ),
+            )
           ],
         ),
       ),
