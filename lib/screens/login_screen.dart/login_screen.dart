@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:minimalist_login/components/my_text_field.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+  LoginScreen({super.key});
+
+  final usernameController = TextEditingController();
+  final passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +33,17 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(height: 25),
             // form Fields
 
-            MyTextField(),
+            MyTextField(
+              controller: usernameController,
+              hintText: 'Username',
+              obscureText: false,
+            ),
             const SizedBox(height: 25),
-            MyTextField(),
+            MyTextField(
+              controller: passwordController,
+              hintText: 'Password',
+              obscureText: true,
+            ), 
           ],
         ),
       ),
