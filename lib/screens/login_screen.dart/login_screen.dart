@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:minimalist_login/components/my_button.dart';
 import 'package:minimalist_login/components/my_text_field.dart';
+import 'package:minimalist_login/components/square_tile.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
@@ -93,6 +94,15 @@ class LoginScreen extends StatelessWidget {
                   )),
                 ],
               ),
+            ),
+            SizedBox(height: 20,),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SquareTile(imagePath: "lib/images/google.png"),
+                SizedBox(width: 10),
+                SquareTile(imagePath: "lib/images/apple.png"),
+              ],
             )
           ],
         ),
