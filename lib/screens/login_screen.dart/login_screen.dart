@@ -20,6 +20,7 @@ class LoginScreen extends StatelessWidget {
       backgroundColor: Colors.grey[300],
       body: SafeArea(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const SizedBox(height: 50),
             // Logo
@@ -95,13 +96,26 @@ class LoginScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SquareTile(imagePath: "lib/images/google.png"),
                 SizedBox(width: 10),
                 SquareTile(imagePath: "lib/images/apple.png"),
+              ],
+            ),
+            const SizedBox(height: 20,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Not a member?", style: TextStyle(color: Colors.grey[700]),),
+                const SizedBox(width: 5,),
+                const Text("Register now",
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontWeight: FontWeight.bold
+                ),)
               ],
             )
           ],
